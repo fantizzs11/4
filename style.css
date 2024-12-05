@@ -1,0 +1,14 @@
+.calc, .registration , .courseSale{
+
+    background: rgb(170, 249, 146);
+    padding: 20px 30px;
+    width: 500px;
+margin: 0 auto 50px;
+}
+
+input, label {
+    display: block;
+}
+input [type="checkbox"]{
+    display: inline;
+}

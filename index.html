@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 вида в одном сайт</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="calc">
+<h2>Калькулятор площади прямоугольника</h2>
+<label for="">
+    a=
+    <input type="text" name="a">
+</label>
+<label for="">
+    b=
+    <input type="text">
+</label>
+<input type="number" name="b">
+        </label>
+        <button onclick="calc()">+</button>
+        <button onclick="calc()">-</button>
+        <button onclick="calc()">*</button>
+        <button onclick="calc()">/</button>
+        <div id="result">Результат:</div>
+    </div>
+
+<div class="courseSale">
+  <h2>Калькулятор стоимости обучения</h2>
+    <label for="">
+        Курс:
+        <select name="" id="courseName">
+            <option value="11.280.000">phyton</option>
+            <option value="12.000.000">Frontend</option>
+            <option value="15.000.000">BackEND</option>
+        </select>
+        <label for="">
+            Скидка:
+            <input type="range" min="0" max="50" step="5" value="0">
+            <span>0%</span>
+        </label>
+        <label for="sale">
+            Сумма:
+            <input type="text" id="sale" readonly>
+        </label>
+    </label>
+</div>
+<script>
+    const courseNameSelect = document.getElementById('courseName');
+       const saleInput = document.getElementById('sale');
+
+       courseNameSelect.addEventListener('change', function () {
+           saleInput.value = this.value;
+       });
+   </script>
+
+
+
+    <div class="registration">
+        <h2>Оставить заявку</h2>
+        <label for="">
+            Страна:
+            <label for="country">Выберите страну:</label>
+        <select id="country">
+            <option value="+7">Россия</option>
+            <option value="+1">США</option>
+            <option value="+49">Германия</option>
+            <option value="+33">Франция</option>
+            <option value="+998">Узбекистан</option>
+        </select>
+        <br><br>
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" placeholder="+998">
+        <button>Отправить</button>
+    </div>
+        </label>
+    </div>
+    <script>
+        const countrySelect = document.getElementById('country');
+           const phoneInput = document.getElementById('phone');
+   
+           countrySelect.addEventListener('change', function () {
+               phoneInput.value = this.value;
+           });
+       </script>
+</body>
+</html>
